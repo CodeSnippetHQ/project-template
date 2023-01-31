@@ -1,0 +1,32 @@
+{
+  "name": "project-template",
+  "version": "1.0.0",
+  "description": "How to use the Project Template",
+  "author": "codesnippet.io",
+  "main": "server/main.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "prestart": "npm run build",
+    "start": "node server/main.js",
+    "dev": "nodemon server/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodeSnippetHQ/project-template.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CodeSnippetHQ/project-template/issues"
+  },
+  "homepage": "https://github.com/CodeSnippetHQ/project-template#readme",
+  "dependencies": {
+    "body-parser": "1.20.1",
+    "dotenv": "16.0.3",
+    "express": "4.18.2",
+    "node-fetch": "3.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "2.0.20"
+  }
+}
