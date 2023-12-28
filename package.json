@@ -6,8 +6,6 @@
   "main": "server/main.js",
   "type": "module",
   "scripts": {
-    "build": "tsc",
-    "prestart": "npm run build",
     "start": "node server/main.js",
     "dev": "nodemon server/main.js"
   },
