@@ -1,18 +1,18 @@
-async function handleSayHello(e) {
+async function sendRequest(e) {
     e.preventDefault();
-    const nameInput = document.getElementById('name');
-    const name = document.getElementById('name').value;
-    const response = await fetch('/api/hello', {
+    const textInput = document.getElementById('text');
+    const text = document.getElementById('text').value;
+    const response = await fetch('/api/request', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ name }),
+        body: JSON.stringify({ text }),
     });
 
-    nameInput.value = '';
+    textInput.value = '';
     const { data } = await response.json();
     alert(data);
 }
 
-document.getElementById('name-form').addEventListener('submit', handleSayHello);
+document.getElementById('form').addEventListener('submit', sendRequest);

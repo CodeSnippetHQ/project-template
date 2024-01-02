@@ -17,9 +17,9 @@ app.use(bodyParser.json())
 app.use(express.static(path.join(process.cwd(), 'client')))
 
 // create http post endpoint that accepts user input
-app.post('/api/hello', async (req, res) => {
-    const { name } = req.body;
-    res.json({ data: `Hello, ${name}` });
+app.post('/api/request', async (req, res) => {
+    const { text } = req.body;
+    res.json({ data: text });
 });
 
 // set the port to listen on
